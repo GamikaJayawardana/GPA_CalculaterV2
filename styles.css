@@ -1,0 +1,140 @@
+:root {
+  --bg-color: #f0f2f5;
+  --card-color: #ffffff;
+  --text-color: #333;
+  --accent: #007bff;
+}
+
+body.dark {
+  --bg-color: #12131a;
+  --card-color: #1e1e2a;
+  --text-color: #f0f0f0;
+  --accent: #4aa3ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--card-color);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  max-width: 960px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+button,
+.upload-btn {
+  padding: 10px 15px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dark-toggle {
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.upload-zone {
+  border: 2px dashed var(--accent);
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.upload-zone.dragover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--accent);
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.summary,
+.final-summary {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.final-summary {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+body.dark tr:nth-child(even) {
+  background-color: #2e2e3f;
+}
+
+body.dark table,
+body.dark th,
+body.dark td {
+  border-color: #555;
+}
+
+body.dark th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+body.dark td {
+  color: #fff;
+}

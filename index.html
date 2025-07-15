@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPA Calculator (Enhanced)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Year-wise GPA Calculator</h1>
+
+    <div class="controls top">
+      <label for="fileInput" class="upload-btn">Upload Excel</label>
+      <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+
+    <input type="file" id="fileInput" accept=".xlsx" class="hidden" />
+    <div class="upload-zone" id="dropZone">
+      Drag & Drop your .xlsx file here or click "Upload Excel"
+    </div>
+
+    <div id="output"></div>
+
+    <div class="controls bottom hidden" id="exportButtons">
+      <button onclick="printPDF()">Export to PDF</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
